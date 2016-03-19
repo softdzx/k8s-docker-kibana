@@ -17,13 +17,13 @@ spec:
         component: elk
         role: kibana
     spec:
-      serviceAccount: elk
+      serviceAccount: default
       containers:
       - name: kibana
         image: theobolo/docker-kibana:latest
         env:
         - name: KIBANA_ES_URL
-          value: "http://10.29.223.215:9200"
+          value: "http://elasticsearch:9200"
         - name: KUBERNETES_TRUST_CERT
           value: "true"
         ports:
