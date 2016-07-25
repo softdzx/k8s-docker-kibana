@@ -4,20 +4,19 @@ metadata:
   name: kibana
   namespace: default
   labels:
-    component: elk
+    component: kibana
     role: kibana
 spec:
   replicas: 1
   selector:
-    component: elk
+    component: kibana
     role: kibana
   template:
     metadata:
       labels:
-        component: elk
+        component: kibana
         role: kibana
     spec:
-      serviceAccount: default
       containers:
       - name: kibana
         image: theobolo/docker-kibana:latest
