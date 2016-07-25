@@ -18,8 +18,8 @@ spec:
         role: kibana
     spec:
       containers:
-      - name: kibana
-        image: theobolo/docker-kibana:latest
+      - name: kibana-dashboard
+        image: coursierprive/docker-kibana:4.5.3
         env:
         - name: KIBANA_ES_URL
           value: "http://elasticsearch:9200"
